@@ -24,7 +24,7 @@
 @media(max-width:1150px){.sidebar{width:165px;flex-basis:165px}.cart{width:245px;flex-basis:245px}.products{grid-template-columns:repeat(3,1fr)}.categories{grid-template-columns:repeat(3,1fr)}}@media(max-width:850px){.cart{display:none}.products{grid-template-columns:repeat(2,1fr)}.sidebar{width:60px;flex-basis:60px}.logo{font-size:0}.logo:after{content:"DJM";font:700 17px Georgia,serif}.nav button{justify-content:center}.nav button span{display:none}}@media(max-width:600px){.main{padding:13px}.hero h1{font-size:27px}.categories{grid-template-columns:repeat(3,1fr)}.cat{width:80px;height:80px}.products{grid-template-columns:1fr 1fr}.pimg{height:155px}.detail{grid-template-columns:1fr}.detail img{height:240px}}
 </style></head>
 <body>
-<div class="top">✨ Daily Deals by JM · Designer brands · Great prices · New deals added regularly ✨</div>
+<div class="top">✨ Daily Deals by JM · Designer brands · Great prices · Bought from US, Canada and Japan · All Authentic and Original  ✨</div>
 <div class="app">
 <aside class="sidebar"><div class="logo">Daily Deals <b>by JM ♥</b></div><nav class="nav">
 <button class="active" onclick="scrollTop()">⌂ <span>Dashboard</span></button><button onclick="filterCat('all')">⌕ <span>Shop All</span></button>
@@ -50,13 +50,13 @@
 <script>
 const products=[
 {name:"Michael Kors Tote Bag",brand:"Michael Kors",cat:"Bags",price:4299,img:"bag.png"},
-{name:"Karl Lagerfeld Crossbody",brand:"Karl Lagerfeld",cat:"Bags",price:3199,img:"wallet2.png"},
-{name:"Victoria's Secret Perfume",brand:"Victoria's Secret",cat:"Perfume",price:2499,img:"perfume.png"},
-{name:"Tommy Hilfiger Sneakers",brand:"Tommy Hilfiger",cat:"Shoes",price:3799,img:"shoes.png"},
-{name:"DKNY Wallet",brand:"DKNY",cat:"Wallets",price:1899,img:"wallet.png"},
-{name:"Bath & Body Works Set",brand:"Bath & Body Works",cat:"Perfume",price:1299,img:"bath.png"},
-{name:"Tommy Hilfiger Watch",brand:"Tommy Hilfiger",cat:"Watches",price:4999,img:"watch.png"},
-{name:"Women's Vitamins",brand:"Daily Essentials",cat:"Vitamins",price:599,img:"vitamins.png"}];
+{name:"Tommy Hilfiger Wallet",brand:"Tommy Hilfiger",cat:"Bags",price:1800,img:"wallet2.png"},
+{name:"Tommy Hilfiger Perfume",brand:"Tommy Hilfiger",cat:"Perfume",price:3500,img:"perfume.png"},
+{name:"Tommy Hilfiger Sneakers",brand:"Tommy Hilfiger",cat:"Shoes",price:2499,img:"shoes.png"},
+{name:"Juicy Couture Wallet",brand:"Juicy Couture",cat:"Wallets",price:1299,img:"wallet.png"},
+{name:"Bath & Body Works Set",brand:"Bath & Body Works",cat:"Perfume",price:1099,img:"bath.png"},
+{name:"Anne Klein Watch",brand:"Anne Klein",cat:"Watches",price:1799,img:"watch.png"},
+{name:"Women's Vitamins",brand:"Daily Essentials",cat:"Vitamins",price:1599,img:"vitamins.png"}];
 let cart=[{i:0,q:1},{i:6,q:1},{i:2,q:1}];
 const money=n=>"₱"+n.toLocaleString("en-PH",{minimumFractionDigits:2,maximumFractionDigits:2});
 function renderProducts(list=products){const g=document.getElementById("productGrid");g.innerHTML="";list.forEach(p=>{const i=products.indexOf(p),c=document.createElement("article");c.className="card";c.innerHTML=`<button class="heart" onclick="showToast('Added to wishlist')">♡</button><div class="pimg" onclick="openProduct(${i})"><img src="${p.img}"></div><div class="body"><div class="name">${p.name}</div><div class="stars">★★★★★ <span class="rating">(4.9)</span></div><div class="price">${money(p.price)}</div><button class="add" onclick="add(${i})">Add to Cart</button></div>`;g.appendChild(c)})}
